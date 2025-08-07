@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Success</title>
+  <style>
+    body {
+      background: url('screen5.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      background: #00CC99;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="finalPop()">Continue</button>
+  <script>
+    function finalPop() {
+      alert("ඔයා හොදයි මාරයි ලස්සනයි කියලා ඔයා කැමතිනම් ඔයාගෙ ෆොන් එක ඔෆ් කරලා ඔන් කරලා වෙනස බලන්න කියලා");
+    }
+    setTimeout(() => document.body.innerHTML = "", 10000);
+  </script>
+</body>
+</html>

